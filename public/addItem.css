@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #FFA500; /* Orange text color for the header */
+}
+
+footer {
+    background-color: #ffffff; /* Orange background for the footer */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    flex: 1;
+}
+
+.material-symbols-outlined {
+    color: #757575;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    color: #FFA500;
+    transition: 0.5s ease-out;
+    scale: 1.1;
+}
+
+.material-symbols-outlined::after {
+    color: #FFA500;
+    transition: all 0.5s ease-out;
+    scale: 1.1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-bottom: 100px;
+  align-items: center;
+  align-content: center;
+}
+
+.lebensmittel {
+  margin-bottom: 20px; /* Adjust the margin as needed to create the desired gap */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  position: relative;
+  width: calc(100% - 10px); /* Adjust the width as needed */
+  margin: 20px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 60px;
+  border-radius: 16px;
+  text-align: center;
+  background-size: cover; /* Use 'contain' to fit the entire image inside the div */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-position: center center; /* Center the background image */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px); /* Add some space below the toggle */
+    left: 0;
+    display: none;
+    background-color: #FFA500; /* Background color */
+    border-radius: 16px; /* Border radius */
+    padding: 10px;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: 0.5s ease-out;
+
+}
+
+.specificFood:hover {
+    background-color: #d68c03;
+    border-radius: 16px;
+}
+
+#wurst {
+  background-image: url('/public/dropdownImg/wurst-dropdown.jpg');
+}
+
+#obst {
+  background-image: url('/public/dropdownImg/obst.jpg');
+}
+
+@media screen and (max-width: 768px) {
+  main {
+      grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+  
+  .dropdown {
+      width: 90%; /* Reduce the width for smaller screens */
+      margin: 10px; /* Reduce the margin for smaller screens */
+  }
+  
+  .dropdown-toggle {
+      padding: 30px; /* Adjust padding for smaller screens */
+  }
+}
+  
+.dropdown-menu span {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff; /* Text color */
+    cursor: pointer;
+    padding-left: 5px;
+}
+  
+.dropdown.open .dropdown-menu {
+    display: block;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+    }
+    
+    .dropdown {
+        width: 100%; /* Full-width for dropdowns on smaller screens */
+    }
+    
+    .dropdown-toggle {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: none;
+  z-index: 9998; /* Place it below the popup */
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+  width: 90%; /* Increase width to take up most of the screen */
+  transition: background-color 0.5s;
+}
+
+.popup-open .popup-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Change background color to black with 0.5 opacity */
+}
+.popup-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #FFA500;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value-unit {
+  display: flex; /* Display value and unit inputs side by side */
+  justify-content: space-between;
+  width: 100%;
+}
+
+label {
+  color: #FFA500;
+}
+
+.popup-input {
+  width: 48%; /* Make value and unit inputs take up 48% of the container each */
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #FFA500;
+  border-radius: 12px;
+}
+
+.pieces {
+  width: 95%; /* Make pieces input take up full width */
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.popup-button {
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.popup-button:hover {
+  background-color: #FF7F00;
+  transition: all 0.3s;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+select::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+#add-button {
+  width: 90%;
+  font-size: 18px;
+}
+
+#back-button {
+  width: 90%;
+  background: transparent;
+  border: 2px solid #FFA500;
+  color: #FFA500;
+  font-size: 18px;
+}
+
+#back-button:hover {
+  width: 90%;
+  background-color: #FFA500;
+  border: none;
+  color: #ffffff;
+  transition: all 0.5s;
+}

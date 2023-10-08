@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebensmittel hinzufügen</title>
+    <link rel="stylesheet" href="/addItem.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+    <header>
+        <h1>
+            Lebensmittel<br>hinzufügen
+        </h1>
+    </header>
+    <main>
+        <div class="dropdown" id = "wurst">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/wurst-dropdown.jpg'); opacity: 0.8;">Wurst</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Schinken</span>
+              <span class="specificFood">Salami</span>
+              <span class="specificFood">Wiener Würstchen</span>
+              <span class="specificFood">Leberwurst</span>
+              <span class="specificFood">Teewurst</span>
+              <span class="specificFood">Frühstücksfleisch</span>
+              <span class="specificFood">Jagdwurst</span>
+              <span class="specificFood">Knacker</span>
+            </div>
+        </div>
+            <div class="dropdown" id="obst">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/obst.jpg'); opacity: 0.8;">Obst</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Apfel</span>
+              <span class="specificFood">Birne</span>
+              <span class="specificFood">Zitrone</span>
+              <span class="specificFood">Wassermelone</span>
+              <span class="specificFood">Erdbeere</span>
+              <span class="specificFood">Himbeere</span>
+              <span class="specificFood">Blaubeere</span>
+              <span class="specificFood">Banane</span>
+              <span class="specificFood">Kiwi</span>
+              <span class="specificFood">Kirsche</span>
+              <span class="specificFood">Pfirsisch</span>
+              <span class="specificFood">Nektarine</span>
+              <span class="specificFood">Weintrauben</span>
+              <span class="specificFood">Kokosnuss</span>
+              <span class="specificFood">Pflaume</span>
+              <span class="specificFood">Ananas</span>
+            </div>
+            </div>
+          </div>  
+          <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/gemüse.jpg'); opacity: 0.8;">Gemüse</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Gurke</span>
+              <span class="specificFood">Tomate</span>
+              <span class="specificFood">Raddischen</span>
+              <span class="specificFood">Zwiebel</span>
+              <span class="specificFood">Knoblauch</span>
+              <span class="specificFood">Aubergine</span>
+              <span class="specificFood">Zucchhini</span>
+              <span class="specificFood">Paprika</span>
+              <span class="specificFood">Brokolli</span>
+              <span class="specificFood">Blumenkohl</span>
+              <span class="specificFood">Salat</span>
+              <span class="specificFood">Chicorée</span>
+              <span class="specificFood">Rucola</span>
+              <span class="specificFood">Mais</span>
+              <span class="specificFood">Kohlrabi</span>
+              <span class="specificFood">Kürbis</span>
+              <span class="specificFood">Erbsen</span>
+              <span class="specificFood">Möhren</span>
+              <span class="specificFood">Pilze</span>
+              <span class="specificFood">getrocknete Tomaten</span>
+              <span class="specificFood">Saure Gurke</span>
+            </div>
+          </div>
+          </div>  
+          <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/milchprodukte.jpg'); opacity: 0.8;">Milchprodukte</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Milch</span>
+              <span class="specificFood">Butter</span>
+              <span class="specificFood">Emmentaler</span>
+              <span class="specificFood">Scheibenkäse</span>
+              <span class="specificFood">Parmesan</span>
+              <span class="specificFood">Mozarella</span>
+              <span class="specificFood">Eier</span>
+              <span class="specificFood">Creme Freiche</span>
+              <span class="specificFood">Saure Sahne</span>
+              <span class="specificFood">Buttermilch</span>
+              <span class="specificFood">Schmand</span>
+              <span class="specificFood">Lätta</span>
+              <span class="specificFood">Bratfett</span>
+            </div>
+            </div>
+          </div>  
+          <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/backwaren.jpg'); opacity: 0.8;">Backwaren</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Toastbrot</span>
+              <span class="specificFood">Brötchen</span>
+              <span class="specificFood">Süßes Brot</span>
+              <span class="specificFood">Toasti</span>
+              <span class="specificFood">Croissont</span>
+              <span class="specificFood">Schwarzbrot</span>
+              <span class="specificFood">Filinchen</span>
+              <span class="specificFood">Zwieback</span>
+              <span class="specificFood">Reiswaffeln</span>
+            </div>
+          </div>
+          </div>  
+          <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/fleisch.jpg'); opacity: 0.8;">Fleisch</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Steak</span>
+              <span class="specificFood">Schnitzel</span>
+              <span class="specificFood">Bratwurst</span>
+              <span class="specificFood">Cordon Bleu</span>
+              <span class="specificFood">Geflügel</span>
+          </div>
+          </div>
+          </div>  
+          <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/beilagen.jpg'); opacity: 0.8;">Beilagen</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Kartoffeln</span>
+              <span class="specificFood">Süßkartoffeln</span>
+              <span class="specificFood">Reis</span>
+              <span class="specificFood">Spinat</span>
+              <span class="specificFood">Rotkraut</span>
+              <span class="specificFood">Kartoffelbrei</span>
+              <span class="specificFood">Sauerkraut</span>
+              <span class="specificFood">Nudeln</span>
+              <span class="specificFood">Lasagneplatten</span>
+           </div>
+          </div>
+          </div>
+          
+
+            <div class="dropdown">
+              <div class="dropdown-toggle" style="background-image: url('/dropdownImg/soße.jpg'); opacity: 0.8;">Soßen</div>
+              <div class="dropdown-menu">
+                <span class="specificFood">Braune Soße</span>
+                <span class="specificFood">Tomatensoße</span>
+                <span class="specificFood">Sahnesoße</span>
+                <span class="specificFood">Käsesoße</span>
+                <span class="specificFood">Senfsoße</span>
+                <span class="specificFood">Kartoffelbrei</span>
+                <span class="specificFood">Sauerkraut</span>
+                <span class="specificFood">Sojasoße</span>
+                <span class="specificFood">Rahmensoße</span>
+                <span class="specificFood">Lecho</span>
+              </div>
+            </div>
+            </div>
+
+              <div class="dropdown">
+                <div class="dropdown-toggle" style="background-image: url('/dropdownImg/gewürze.jpg'); opacity: 0.8;">Gewürze</div>
+                <div class="dropdown-menu">
+                  <span class="specificFood">Salz</span>
+                  <span class="specificFood">Pfeffer</span>
+                  <span class="specificFood">Maggigewürz</span>
+                  <span class="specificFood">Paprikagewürz</span>
+                  <span class="specificFood">Pommesgewürz</span>
+                  <span class="specificFood">Kartoffelbrei</span>
+                  <span class="specificFood">Sauerkraut</span>
+                </div>
+              </div>
+              </div>
+              
+
+                <div class="dropdown">
+                  <div class="dropdown-toggle" style="background-image: url('/dropdownImg/getränke.jpg'); opacity: 0.8;">Getränke</div>
+                  <div class="dropdown-menu">
+                    <span class="specificFood">Wasser</span>
+                    <span class="specificFood">Tonic</span>
+                    <span class="specificFood">Cola-M</span>
+                    <span class="specificFood">Cola-K</span>
+                    <span class="specificFood">Himbeerbrause</span>
+                    <span class="specificFood">Eistee</span>
+                    <span class="specificFood">Kaffee</span>
+                    <span class="specificFood">Sirup</span>
+                    <span class="specificFood">Saft</span>
+                    <span class="specificFood">Tee</span>
+                </div>
+                </div>
+                </div>
+            <div class="dropdown">
+            <div class="dropdown-toggle" style="background-image: url('/dropdownImg/sonstiges.jpg'); opacity: 0.8;">Sonstiges</div>
+            <div class="dropdown-menu">
+              <span class="specificFood">Ketchup</span>
+              <span class="specificFood">Senf</span>
+              <span class="specificFood">Maggi</span>
+              <span class="specificFood"></span>
+            </div>
+            </div>
+          </div>
+
+
+          <div class="popup-container">
+            <div class="popup-heading" name = "title">Food Item Name</div>
+            <form class="popup-form" method="post" action="/addItem">
+                <label for="value">Einheit:</label>
+                <div class="value-unit">
+                    <input type="text" id="value" class="popup-input" placeholder="Wert eingeben..." name="value">
+                    <select id="unit" class="popup-input" name="unit">
+                        <option value="ml">ml</option>
+                        <option value="g">g</option>
+                        <option value="kg">kg</option>
+                        <option value="-">-</option>
+                    </select>
+                </div>
+                <label for="pieces">Stückzahl:</label>
+                <input type="text" id="pieces" class="popup-input pieces" placeholder="Stückzahl eingeben (z.B. 5)" name="pieces">
+                <div class="popup-buttons">
+                    <button id="back-button" class="popup-button">Zurück</button>
+                    <button id="add-button" class="popup-button" type="submit">Zur Liste <br> hinzufügen</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <div class="icon">
+                <a href="/shoppingList">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="addItem.html">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    restaurant
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="/addItem.js"></script>
+</body>
+</html>

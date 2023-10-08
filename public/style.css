@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --secondary: #FFA500;
+    --font: 'Poppins', sans-serif;
+}
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background and text colors */
+body {
+    background-color: #ffffff; /* Orange background */
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page takes up at least the full viewport height */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #FFA500; /* Orange text color for the header */
+}
+
+main {
+    flex: 1; /* Expand main content to fill remaining vertical space */
+    padding: 20px;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    background-color: #FFA500; /* Creamy background for the boxes */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #ffffff; /* Orange background for the footer */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    flex: 1;
+}
+
+.material-symbols-outlined {
+    color: #757575;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    color: #FFA500;
+    transition: 0.5s ease-out;
+    scale: 1.1;
+}
+
+.material-symbols-outlined::after {
+    color: #FFA500;
+    transition: all 0.5s ease-out;
+    scale: 1.1;
+}
+
+#landingPageParagraph {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.headingHero1 {
+    text-align: center;
+    margin: 20px 10px;
+}
+
+
+.favoriteFood {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto); /* Change row heights to 'auto' for gaps */
+    justify-items: center;
+    margin-bottom: 100px;
+}
+
+/* Style .box2 like cubes */
+.box2 {
+    background-color: var(--secondary);
+    width: calc(80% - 20px); /* Calculate width to include margin and gap */
+    padding: 20px;
+    height: 150px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(700px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+    margin: 10px auto; /* Add margin to create spacing, and set 'auto' for vertical centering */
+    position: relative;
+}
+
+.box2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    pointer-events: none; /* Ensure the overlay doesn't interfere with hover/click events */
+}
+
+/* Apply a hover effect for the cube rotation */
+.box2:hover {
+    transform: perspective(700px) rotateX(5deg) rotateY(5deg);
+}
+
+.favoriteFood1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.favoriteFood1 .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6; /* Adjust the opacity of the background image */
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.favoriteFood1 .text {
+    color: black;
+    font-weight: 1000;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust background color for text */
+    padding: 10px; /* Add padding for better text visibility */
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.favoriteFood1 .addToList {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    height: calc(100% - 80%);
+    background-color: #FFA500;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.favoriteFood1 .addToList:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.addToList:hover {
+    border: 3px solid #FFA500;
+    transition: all 0.5s ease;
+}
+
+
+.background-image {
+    background-size: cover; /* Scale the background image to cover the container */
+    background-position: center;
+    border-radius: 10px;
+}
+
+
+.img1 {
+    background-image: url('/img/gurke.jpg');
+}
+
+.img2 {
+    background-image: url('img/brot.jpg');
+}
+.img3 {
+    background-image: url('img/eier.jpg');
+}
+.img4 {
+    background-image: url('img/wurst.jpg');
+}
+.img5 {
+    background-image: url('img/milch.jpg');
+}
+.img6 {
+    background-image: url('img/honig.jpg');
+}
+.img7 {
+    background-image: url('img/kaese.jpg');
+}
+.img8 {
+    background-image: url('img/nutella.jpg');
+}
